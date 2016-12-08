@@ -1,6 +1,6 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Главная страница{% endblock %}
+{% block pageTitle %}Карточка товара{% endblock %}
 
 {% block content %}
     {% include "layouts/breadcrumbs.twig" %}
@@ -11,9 +11,34 @@
                     <div class="col-md-3">
                         {% include "layouts/sidebar.twig" %}
                     </div>
-                    <div class="col-md-9 mh-100pc">
+                    <div class="col-md-9">
                         <div class="page-body__content">
-
+                            <div class="page-body__content-inner m-mh-full">
+                                <div class="product-card">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="product-card__photo-big"></div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="product-card__header">
+                                                3G детские умные часы Q75 на Android 4.2 1.2 ГГц Smart Baby Watch с GPS трекером 3G WCDMA WIFI КАМЕРА
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products">
+                                    <div class="products__item">
+                                        <div class="bg-light-gray">
+                                            <p>Сопутствующие товары</p>
+                                        </div>
+                                    </div>
+                                    <div class="products__item">
+                                        <div class="bg-blue">
+                                            <p>Просмотренные товары</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

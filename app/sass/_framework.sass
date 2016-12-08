@@ -123,6 +123,8 @@ $form-group-margin-bottom: 10px !default
     margin-bottom: 20px
 .mb-25
     margin-bottom: 25px
+.mb-35
+    margin-bottom: 35px
 .ml-10
     margin-left: 10px
 .mr-5
@@ -132,13 +134,16 @@ $form-group-margin-bottom: 10px !default
 .mr-20
     margin-right: 20px
 
-.mh-100pc
-    min-height: 100%
+.p-r
+    position: relative
 
 .bg-light-gray
     background: #eeeeee
 .bg-blue
     background: #326cb5
+
+.bdr-b-gray
+    border-bottom: 1px solid #aaaaaa
 
 .bdr-r-a-gray
     position: relative
@@ -187,10 +192,80 @@ $form-group-margin-bottom: 10px !default
 .fs-20
     font-size: 20px
 
+.h2, h2
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 34px
+    color: #326cb5
 .h4, h4
-    font-size: 17px
+    margin-top: 0
+    margin-bottom: 20px
+    font-size: 19px
 .h5, h5
     font-size: 15px
+.chapter
+    >.paragraph:last-child, p:last-child
+        margin-bottom: 0
+    &.fused
+        .paragraph, p
+            margin-bottom: 0
+.paragraph, p
+    margin-bottom: 20px
+    font-size: 15px
+.ls-inside
+    padding-left: 0
+    list-style-position: inside
+.list-markered
+    padding-left: 0
+    list-style: none
+    >li
+        &:before
+            content: ""
+            display: inline-block
+            vertical-align: top
+            width: 6px
+            height: 6px
+            background: #000
+            margin-top: 8px
+            margin-right: 6px
+            +border-radius(50%)
+.list-blue
+    list-style: none
+    padding-top: 20px
+    padding-left: 25px
+    margin-bottom: 40px
+    font-size: 15px
+    color: #326cb5
+    >li
+        position: relative
+        margin-bottom: 15px
+        &:before
+            content: ""
+            display: inline-block
+            vertical-align: top
+            width: 6px
+            height: 6px
+            background: #326cb5
+            position: absolute
+            top: 55%
+            left: -20px
+            -webkit-transform: translateY(-50%)
+            -moz-transform: translateY(-50%)
+            -ms-transform: translateY(-50%)
+            -o-transform: translateY(-50%)
+            transform: translateY(-50%)
+            +border-radius(50%)
+        &:last-child
+            margin-bottom: 0
+        > a
+            color: #326cb5
+            text-decoration: underline
+            &:hover, &:active, &:focus
+                color: #ff9900
+            &:visited
+                &:hover, &:active, &:focus
+                    color: #ff9900
+
 
 .d-ib
     display: inline-block

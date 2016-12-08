@@ -425,9 +425,10 @@
 
 .catalog-filter
     border: 1px solid #ababab
-    margin-bottom: 35px
 .catalog-filter__item
     border-bottom: 1px solid #ababab
+    &:last-child
+        border-bottom: 0
 .catalog-filter__item-inner
     padding: 15px
 .catalog-filter__item-header
@@ -519,7 +520,7 @@
 
 
 .breadcrumbs
-    padding: 15px 0
+    padding: 12px 0
 .breadcrumbs__list
     list-style: none
     padding-left: 0
@@ -552,9 +553,12 @@
             color: #ff9900
 
 
-.page-body__content
+.page-body
+    margin-bottom: 35px
+.page-body__content-inner
+    padding: 20px 20px 35px 20px
     border: 1px solid #aaaaaa
-
+    +transition(all 0.5s ease 0s)
 
 .pay-soc-wrap
     padding: 10px 25px
