@@ -155,4 +155,26 @@ $(document).ready(function () {
             $('#slider-range-finish-price').val(slider.data('slider').value[1]);
         }, 500);
     });
+
+    var mouseX = 0, mouseY = 0;
+
+    $(document).mousemove(function(event) {
+        mouseX = event.pageX;
+        mouseY = event.pageY;
+    });
+
+    $(".catalog-showcase__item").hover(function(e) {
+        var x  = mouseX - $(this).offset().left - 100;
+        var y = mouseY - $(this).offset().top - 100;
+        $(this).find('.gps_ring').css({
+            "left": x,
+            "top": y
+        }).show(0);
+
+    }, function() {
+    });
+
+    $('#example2').mousemove(function(e){
+
+    });
 });

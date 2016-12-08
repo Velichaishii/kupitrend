@@ -157,6 +157,10 @@
     position: absolute
     top: 50%
     right: 5px
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
     transform: translateY(-50%)
     outline: none
     &:hover, &:focus
@@ -273,7 +277,7 @@
 
 
 .sorting
-    padding: 25px 0 10px 0
+    padding: 25px 0 15px 0
 .sorting__list
     margin-bottom: 0
 .sorting__item
@@ -301,8 +305,9 @@
 .catalog-nav
     margin-bottom: 35px
 .catalog-nav__header
-    padding: 12px 10px
+    padding: 12px 10px 12px 45px
     background: #326cb5
+    position: relative
     text-transform: uppercase
     font-size: 15px
     color: #fff
@@ -387,6 +392,10 @@
         position: absolute
         top: 53%
         left: 15px
+        -webkit-transform: translateY(-50%) rotate(45deg)
+        -moz-transform: translateY(-50%) rotate(45deg)
+        -ms-transform: translateY(-50%) rotate(45deg)
+        -o-transform: translateY(-50%) rotate(45deg)
         transform: translateY(-50%) rotate(45deg)
         +transition(all 0.5s ease 0s)
     &.snd-lvl
@@ -413,6 +422,7 @@
         .icon-plus-gray
             +sprite(minus)
 
+
 .catalog-filter
     border: 1px solid #ababab
     margin-bottom: 35px
@@ -420,7 +430,7 @@
     border-bottom: 1px solid #ababab
 .catalog-filter__item-inner
     padding: 15px
-.catalog-filter__param-header-wrap
+.catalog-filter__item-header
     padding: 15px
     background: #eeeeee
     text-align: center
@@ -430,6 +440,120 @@
     margin-bottom: 10px
     &:last-child
         margin-bottom: 0
+
+
+.catalog-showcase__item
+    padding: 15px
+    border: 1px solid #aaaaaa
+    margin-bottom: 35px
+    position: relative
+    overflow: hidden
+    +transition(all 0.5s ease 0s)
+.catalog-showcase__item-header
+    margin-bottom: 25px
+.catalog-showcase__link-name
+    display: block
+    color: #326cb5
+    &:hover, &:active, &:focus
+        text-decoration: none
+        color: #fd2f08
+    &:visited
+        &:hover, &:active, &:focus
+            text-decoration: none
+            color: #fd2f08
+    +transition(all 0.5s ease 0s)
+.catalog-showcase__link-img
+    display: block
+    padding-top: 102%
+    margin-bottom: 10px
+    position: relative
+    overflow: hidden
+.catalog-showcase__img-bg
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    backface-visibility: hidden
+    transform: translateZ(0)
+.catalog-showcase__service
+    font-size: 0
+    margin-bottom: 15px
+.catalog-showcase__service-inner
+    display: inline-block
+    width: 50%
+    font-size: 14px
+.catalog-showcase__link
+    text-decoration: underline
+    font-size: 11px
+    color: #000
+    +transition(all 0.5s ease 0s)
+    &:hover, &:active, &:focus
+        color: #fd2f08
+    &:visited
+        &:hover, &:active, &:focus
+            color: #fd2f08
+
+.gps_ring
+    border: 15px solid rgba(50, 108, 181, .2)
+    -webkit-border-radius: 50%
+    height: 200px
+    width: 200px
+    position: absolute
+    left: 0
+    top: 0
+    -webkit-animation: pulsate 1s ease-out
+    -webkit-animation-iteration-count: infinite
+    opacity: 1
+    display: none
+@-webkit-keyframes pulsate
+    0%
+        -webkit-transform: scale(0.1, 0.1)
+        opacity: 0.0
+    50%
+        opacity: 1.0
+    100%
+        -webkit-transform: scale(1.2, 1.2)
+        opacity: 0.0
+
+
+.breadcrumbs
+    padding: 15px 0
+.breadcrumbs__list
+    list-style: none
+    padding-left: 0
+    margin-bottom: 0
+.breadcrumbs__item
+    display: inline-block
+    vertical-align: top
+    &:after
+        content: "-"
+        display: inline-block
+    &:last-child
+        &:after
+            display: none
+        .breadcrumbs__link
+            &:hover, &:active, &:focus
+                color: #000
+            &:visited
+                &:hover, &:active, &:focus
+                    color: #000
+.breadcrumbs__link
+    display: inline-block
+    text-decoration: underline
+    font-size: 11px
+    color: #000
+    +transition(all 0.5s ease 0s)
+    &:hover, &:active, &:focus
+        color: #ff9900
+    &:visited
+        &:hover, &:active, &:focus
+            color: #ff9900
+
+
+.page-body__content
+    border: 1px solid #aaaaaa
 
 
 .pay-soc-wrap

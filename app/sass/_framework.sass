@@ -40,6 +40,10 @@ $form-group-margin-bottom: 10px !default
                 position: absolute
                 top: 50%
                 right: 0
+                -webkit-transform: translateY(-50%)
+                -moz-transform: translateY(-50%)
+                -ms-transform: translateY(-50%)
+                -o-transform: translateY(-50%)
                 transform: translateY(-50%)
             &:first-child
                 padding-left: 0
@@ -121,10 +125,15 @@ $form-group-margin-bottom: 10px !default
     margin-bottom: 25px
 .ml-10
     margin-left: 10px
+.mr-5
+    margin-right: 5px
 .mr-10
     margin-right: 10px
 .mr-20
     margin-right: 20px
+
+.mh-100pc
+    min-height: 100%
 
 .bg-light-gray
     background: #eeeeee
@@ -178,6 +187,11 @@ $form-group-margin-bottom: 10px !default
 .fs-20
     font-size: 20px
 
+.h4, h4
+    font-size: 17px
+.h5, h5
+    font-size: 15px
+
 .d-ib
     display: inline-block
 .va-m
@@ -193,36 +207,11 @@ $form-group-margin-bottom: 10px !default
     position: absolute
     top: 50%
     left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    -moz-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    -o-transform: translate(-50%, -50%)
     transform: translate(-50%, -50%)
-
-.circle
-    display: inline-block
-    vertical-align: middle
-    padding: 5px
-    -webkit-border-radius: 50%
-    -moz-border-radius: 50%
-    border-radius: 50%
-    border-style: solid
-    border-width: 2px
-    text-align: center
-    &.big
-        width: 50px
-        height: 50px
-    &.medium
-        width: 25px
-        height: 25px
-    &.small
-        width: 15px
-        height: 15px
-        border-width: 1px
-    &.white
-        border-color: #fff
-    &.gray
-        border-color: #9d9d9d
-    &.blue
-        border-color: #326cb5
-    &.orange
-        border-color: #fd2f08
 
 .caret
     margin-left: 10px
@@ -268,7 +257,7 @@ $form-group-margin-bottom: 10px !default
 .icon-cart
     +sprite(cart)
 .icon-catalog
-    +sprite(catalog)
+    +sprite(catalog, "all", "abs_middle")
 
 .icon-arrow-down
     +sprite(arrow-down-blue)
@@ -324,6 +313,17 @@ $form-group-margin-bottom: 10px !default
     +sprite(plus-gray)
 .icon-minus
     +sprite(minus)
+
+.stars-md-unpainted
+    text-align: center
+    margin-bottom: 10px
+.icon-star-md-unpainted
+    +sprite(star-md-unpainted)
+
+.icon-comment
+    +sprite(comment)
+.icon-plus-blue
+    +sprite(plus-blue)
 
 .icon-tel-white
     +sprite(tel-white)
@@ -392,9 +392,21 @@ $form-group-margin-bottom: 10px !default
 .btn-info
     padding: 0 35px
     background: #326cb5
+    font-size: 20px
     line-height: 36px
     border: 2px solid transparent
     cursor: pointer
+    &:hover, &:active, &:focus
+        background: transparent
+        border-color: #326cb5
+        text-decoration: none
+        color: #326cb5
+        &:visited
+            &:hover, &:active, &:focus
+                background: transparent
+                border-color: #326cb5
+                text-decoration: none
+                color: #326cb5
 
 
 .input-text, input[type="text"]
@@ -416,6 +428,7 @@ $form-group-margin-bottom: 10px !default
     +border_radius(5px)
 .input-text-primary
     vertical-align: middle
+    padding: 0 10px
     border: 1px solid #fff
     height: 34px
     font-size: 15px
@@ -440,6 +453,10 @@ $form-group-margin-bottom: 10px !default
     position: absolute
     top: 50%
     left: 0
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
     transform: translateY(-50%)
     outline: none
     opacity: 0
@@ -456,6 +473,10 @@ $form-group-margin-bottom: 10px !default
     position: absolute
     top: 50%
     left: 0
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
     transform: translateY(-50%)
     +border_radius(50%)
     &:before
@@ -467,6 +488,10 @@ $form-group-margin-bottom: 10px !default
         position: absolute
         top: 50%
         left: 50%
+        -webkit-transform: translate(-50%, -50%)
+        -moz-transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+        -o-transform: translate(-50%, -50%)
         transform: translate(-50%, -50%)
         opacity: 0
         +border_radius(50%)
@@ -494,6 +519,10 @@ input[type="radio"]
     .slider-handle:last-child
         background: #ff290b
         +border_radius(50%)
+.tooltip
+    &.top
+        display: none
+
 
 .form-group
     margin-bottom: $form-group-margin-bottom
@@ -502,6 +531,3 @@ input[type="radio"]
         margin-bottom: 10px
         &:last-child
             margin-bottom: 0
-
-.h5
-    font-size: 16px

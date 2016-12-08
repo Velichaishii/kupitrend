@@ -1,0 +1,23 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+    {% include "layouts/breadcrumbs.twig" %}
+    <div class="page-body">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        {% include "layouts/sidebar.twig" %}
+                    </div>
+                    <div class="col-md-9 mh-100pc">
+                        <div class="page-body__content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
