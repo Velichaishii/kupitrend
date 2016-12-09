@@ -210,7 +210,7 @@
             padding-right: 5px
         .call__link
             position: relative
-            color: #326cb5
+            color: #316cb3
             +transition(all 0.5s ease 0s)
             &:hover, &:active, &:focus
                 color: #fd2f08
@@ -289,7 +289,7 @@
     display: inline-block
     font-size: 15px
     text-transform: uppercase
-    color: #326cb5
+    color: #316cb3
     +transition(all 0.5s ease 0s)
     &:hover, &:active, &:focus
         text-decoration: none
@@ -306,7 +306,7 @@
     margin-bottom: 35px
 .catalog-nav__header
     padding: 12px 10px 12px 45px
-    background: #326cb5
+    background: #316cb3
     position: relative
     text-transform: uppercase
     font-size: 15px
@@ -331,10 +331,10 @@
     &:hover, &:focus
         > .catalog-nav__link
             background: #eeeeee
-            color: #326cb5
+            color: #316cb3
             &:visited
                 background: #eeeeee
-                color: #326cb5
+                color: #316cb3
         .icon-gadget
             +sprite(gadget-blue)
         .icon-clock
@@ -376,12 +376,12 @@
     &:hover, &:active, &:focus
         background: #eeeeee
         text-decoration: none
-        color: #326cb5
+        color: #316cb3
     &:visited
         &:hover, &:active, &:focus
             background: #eeeeee
             text-decoration: none
-            color: #326cb5
+            color: #316cb3
     &.snd-lvl:before
         content: ""
         display: block
@@ -401,7 +401,7 @@
     &.snd-lvl
         &:hover, &:active, &:focus
             &:before
-                border-color: #326cb5
+                border-color: #316cb3
 .catalog-nav__icon
     display: block
     width: 45px
@@ -454,7 +454,7 @@
     margin-bottom: 25px
 .catalog-showcase__link-name
     display: block
-    color: #326cb5
+    color: #316cb3
     &:hover, &:active, &:focus
         text-decoration: none
         color: #fd2f08
@@ -559,6 +559,70 @@
     padding: 20px 20px 35px 20px
     border: 1px solid #aaaaaa
     +transition(all 0.5s ease 0s)
+
+
+.order__quantity
+    display: inline-block
+    position: absolute
+    top: calc(50% - 10px)
+    right: 0
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
+.order__table
+    padding: 10px 15px
+    margin-bottom: 15px
+    border: 1px solid #aaaaaa
+.order__row
+    padding: 10px 0
+    font-size: 0
+    &:first-child
+        .order__cell
+            font-size: 12px
+.order__cell
+    display: inline-block
+    vertical-align: top
+    width: 15%
+    padding: 0 10px
+    font-size: 15px
+    &:first-child
+        width: 55%
+        padding-left: 0
+    &:last-child
+        padding-right: 0
+.order__img
+    float: left
+    width: 100px
+    height: 80px
+    margin-right: 15px
+    background: #9d9d9d
+.order__right-b
+    display: inline-block
+    width: 270px
+    text-align: left
+    .bootstrap-select
+        width: 100%
+        margin-bottom: 10px
+    .btn-lg
+        width: 100%
+
+
+.upload-photo
+    font-size: 0
+    margin-bottom: 35px
+.upload-photo__left-b
+    display: inline-block
+    vertical-align: top
+    width: 180px
+    font-size: 14px
+.upload-photo__right-b
+    display: inline-block
+    vertical-align: top
+    width: calc(100% - 180px)
+    font-size: 12px
+    color: #9d9d9d
 
 .pay-soc-wrap
     padding: 10px 25px

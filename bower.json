@@ -6,6 +6,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "fancybox": "^2.1.5",
-    "bootstrap-slider": "*"
+    "bootstrap-slider": "*",
+    "bootstrap-select": "^1.12.1"
   }
 }

@@ -52,7 +52,7 @@ $form-group-margin-bottom: 10px !default
                 &:after
                     display: none
             > a
-                color: #326cb5
+                color: #316cb3
                 &:hover, &:active, &:focus
                     background: transparent
                     color: #fd2f08
@@ -107,102 +107,19 @@ $form-group-margin-bottom: 10px !default
     padding: 30px 0
 
 
-.clean
-    width: auto
-    height: auto
-    background: none
-    padding: 0
-    margin: 0
-    border: none
-
-.mb-10
-    margin-bottom: 10px
-.mb-15
-    margin-bottom: 15px
-.mb-20
-    margin-bottom: 20px
-.mb-25
-    margin-bottom: 25px
-.mb-35
-    margin-bottom: 35px
-.ml-10
-    margin-left: 10px
-.mr-5
-    margin-right: 5px
-.mr-10
-    margin-right: 10px
-.mr-20
-    margin-right: 20px
-
-.p-r
-    position: relative
-
-.bg-light-gray
-    background: #eeeeee
-.bg-blue
-    background: #326cb5
-
-.bdr-b-gray
-    border-bottom: 1px solid #aaaaaa
-
-.bdr-r-a-gray
-    position: relative
-    &:after
-        content: ""
-        display: block
-        width: 1px
-        height: 100%
-        background: #ababab
-        position: absolute
-        top: 0
-        right: 2%
-.bdr-r-a-gradient
-    position: relative
-    &:after
-        content: ""
-        display: block
-        width: 1px
-        height: 220px
-        border-right: 1px solid #2863a5
-        background: #4c87cb
-        position: absolute
-        top: 0
-        right: 0
-
-.c-white
-    color: #fff
-.c-gray
-    color: gray
-.c-blue
-    color: #326cb5
-
-.tt-u
-    text-transform: uppercase
-.td-u
-    text-decoration: underline
-
-.fs-0
-    font-size: 0
-.fs-11
-    font-size: 11px
-.fs-12
-    font-size: 12px
-.fs-15
-    font-size: 15px
-.fs-20
-    font-size: 20px
 
 .h2, h2
     margin-top: 0
     margin-bottom: 20px
     font-size: 34px
-    color: #326cb5
+    color: #316cb3
 .h4, h4
     margin-top: 0
     margin-bottom: 20px
     font-size: 19px
 .h5, h5
     font-size: 15px
+
 .chapter
     >.paragraph:last-child, p:last-child
         margin-bottom: 0
@@ -212,6 +129,7 @@ $form-group-margin-bottom: 10px !default
 .paragraph, p
     margin-bottom: 20px
     font-size: 15px
+
 .ls-inside
     padding-left: 0
     list-style-position: inside
@@ -235,7 +153,7 @@ $form-group-margin-bottom: 10px !default
     padding-left: 25px
     margin-bottom: 40px
     font-size: 15px
-    color: #326cb5
+    color: #316cb3
     >li
         position: relative
         margin-bottom: 15px
@@ -245,7 +163,7 @@ $form-group-margin-bottom: 10px !default
             vertical-align: top
             width: 6px
             height: 6px
-            background: #326cb5
+            background: #316cb3
             position: absolute
             top: 55%
             left: -20px
@@ -258,7 +176,7 @@ $form-group-margin-bottom: 10px !default
         &:last-child
             margin-bottom: 0
         > a
-            color: #326cb5
+            color: #316cb3
             text-decoration: underline
             &:hover, &:active, &:focus
                 color: #ff9900
@@ -266,27 +184,354 @@ $form-group-margin-bottom: 10px !default
                 &:hover, &:active, &:focus
                     color: #ff9900
 
+a
+    text-decoration: underline
+    font-size: 15px
+    color: #316cb3
+    +transition(all 0.5s ease 0s)
+    &:hover, &:active, &:focus
+        color: #ff9900
+    &:visited
+        &:hover, &:active, &:focus
+            color: #ff9900
 
-.d-ib
-    display: inline-block
-.va-m
-    display: inline-block
+.btn
+    +transition(all 0.5s ease 0s)
+    +border_radius(0)
+    outline: none
+.btn-default
+    background: #316cb3
+    border: 1px solid #316cb3
+    padding: 0 30px
+    line-height: 30px
+    font-size: 15px
+    color: #fff
+    &:hover, &:active, &:focus
+        background: #fff
+        border-color: #316cb3
+        color: #316cb3
+        &:visited
+            &:hover, &:active, &:focus
+                background: #fff
+                border-color: #316cb3
+                color: #316cb3
+.btn-lg
+    padding: 0 30px
+    line-height: 46px
+    font-size: 20px
+.btn-sm
+    padding: 0 30px
+    line-height: 32px
+    font-size: 15px
+.btn-xs
+    padding: 0 10px
+    line-height: 20px
+    text-transform: uppercase
+    font-size: 12px
+    +border_radius(5px)
+.btn-primary
+    padding: 0 20px
+    background: #fff
+    border: 1px solid #fff
+    line-height: 32px
+    font-size: 15px
+    color: #316cb3
+    +border_radius(8px)
+    &:hover, &:active, &:focus
+        background: #37389f
+        border-color: #37389f
+        text-decoration: none
+        color: #fff
+        &:visited
+            &:hover, &:active, &:focus
+                background: #37389f
+                border-color: #37389f
+                text-decoration: none
+                color: #fff
+.btn-info
+    padding: 0 35px
+    background: #316cb3
+    font-size: 20px
+    line-height: 36px
+    border: 2px solid transparent
+    cursor: pointer
+    &:hover, &:active, &:focus
+        background: transparent
+        border-color: #316cb3
+        text-decoration: none
+        color: #316cb3
+        &:visited
+            &:hover, &:active, &:focus
+                background: transparent
+                border-color: #316cb3
+                text-decoration: none
+                color: #316cb3
+
+
+.input-text, input[type="text"]
+    outline: none
+.input-text-default
+    padding: 0 10px
+    border: 1px solid #aaaaaa
+    height: 30px
+    font-size: 12px
+.input-text-sm
+    width: 60px
+    height: 26px
+    padding: 0 7px
+    font-size: 15px
+.input-text-xs
+    width: 50px
+    height: 20px
+    padding: 0 5px
+    font-size: 12px
+    border: 2px solid #aaaaaa
+    +border_radius(5px)
+.input-text-primary
     vertical-align: middle
-.va-m-b
-    &::before
+    padding: 0 10px
+    border: 1px solid #fff
+    height: 34px
+    font-size: 15px
+    +border_radius(8px)
+    &::-webkit-input-placeholder
+        color: #9d9d9d
+    &::-moz-placeholder
+        color: #9d9d9d
+    &:-ms-input-placeholder
+        color: #9d9d9d
+
+.textarea, textarea
+    display: block
+    width: 100%
+    height: 150px
+    padding: 10px 15px
+    max-width: 100%
+    max-height: 300px
+    border: 1px solid #aaaaaa
+    font-size: 15px
+    outline: none
+    &::-webkit-input-placeholder
+        font-size: 12px
+        color: #9d9d9d
+    &::-moz-placeholder
+        font-size: 12px
+        color: #9d9d9d
+    &:-ms-input-placeholder
+        font-size: 12px
+        color: #9d9d9d
+
+.input-file-hidden
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    overflow: hidden
+    opacity: 0
+    cursor: pointer
+    &:before
         content: ""
-        display: inline-block
-        vertical-align: middle
+        display: block
+        width: 100%
         height: 100%
-.abs-center
+        position: absolute
+        top: 0
+        left: 0
+        cursor: pointer
+
+.bootstrap-select
+    &:focus
+        outline: none
+    &.btn-group .dropdown-toggle .caret
+        border-top: 11px solid #aaaaaa
+        border-left: 7px solid transparent
+        border-right: 7px solid transparent
+        position: absolute
+        top: 40%
+        right: 7px
+    .btn, .dropdown-toggle, .btn-default
+        background: none
+        padding: 0 7px
+        border: 1px solid #aaaaaa
+        line-height: 26px
+        color: #000
+        &:focus
+            outline: none !important
+        &:active
+            background: none
+    .caret
+        border-top-color: #aaaaaa
+    &.open
+        *
+            outline: none
+        .btn, .dropdown-toggle, .btn-default
+            -webkit-box-shadow: none
+            -moz-box-shadow: none
+            box-shadow: none
+            background: none
+            &:hover, &:active, &:focus
+                background: none
+                border: 1px solid #aaaaaa
+                color: #000
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+    width: 100%
+.bootstrap-select.btn-group .dropdown-menu li a
+    padding: 4px 7px
+    &:hover
+        background: #eeeeee
+.bootstrap-select.btn-group .dropdown-menu
+    padding: 0
+    border: 1px solid #aaaaaa
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    border-radius: 0
+
+.select
+    position: relative
+    background: #fff
+    &:after
+        content: ""
+        display: block
+        border-top: 11px solid #9d9d9d
+        border-left: 7px solid transparent
+        border-right: 7px solid transparent
+        position: absolute
+        top: 8px
+        right: 7px
+    .select__box, select
+        width: 100%
+        position: relative
+        z-index: 10
+        cursor: pointer
+.select__box
+    height: 26px
+    border: 1px solid #aaaaaa
+    background: none
+    padding: 0 25px 0 7px
+    margin-bottom: 10px
+    font-size: 15px
+    outline: none
+    -webkit-appearance: none
+    -moz-appearance: none
+
+.radio
+    display: inline-block
+    padding-left: 25px
+    margin: 0
+    font-size: 15px
+    font-weight: normal
+    cursor: pointer
+.radio__switch
     position: absolute
     top: 50%
-    left: 50%
-    -webkit-transform: translate(-50%, -50%)
-    -moz-transform: translate(-50%, -50%)
-    -ms-transform: translate(-50%, -50%)
-    -o-transform: translate(-50%, -50%)
-    transform: translate(-50%, -50%)
+    left: 0
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
+    outline: none
+    opacity: 0
+    &:checked + .radio__switch-imitator
+        &:before
+            width: 8px
+            height: 8px
+            opacity: 1
+.radio__switch-imitator
+    display: block
+    width: 16px
+    height: 16px
+    border: 1px solid #ababab
+    position: absolute
+    top: 50%
+    left: 0
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
+    +border_radius(50%)
+    &:before
+        content: ""
+        display: block
+        width: 16px
+        height: 16px
+        background: #ababab
+        position: absolute
+        top: 50%
+        left: 50%
+        -webkit-transform: translate(-50%, -50%)
+        -moz-transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+        -o-transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%)
+        opacity: 0
+        +border_radius(50%)
+        +transition(all 0.5s ease 0s)
+input[type="radio"]
+    margin-top: 0
+.radio input[type="radio"]
+    margin-left: 0
+
+.slider-horizontal
+    width: 238px
+    margin-bottom: 0
+.slider-track
+    height: 5px
+    background: #aaaaaa
+.slider-horizontal .slider-track
+    height: 5px
+.slider-horizontal .slider-selection
+    background: #aaaaaa
+.slider-horizontal
+    .slider-handle
+        margin-top: -7px
+        background: #316cb3
+        +border_radius(50%)
+    .slider-handle:last-child
+        background: #ff290b
+        +border_radius(50%)
+.tooltip
+    &.top
+        display: none
+
+.form-group
+    margin-bottom: $form-group-margin-bottom
+    > input
+        width: 100%
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+
+
+
+.rating
+    overflow: hidden
+    display: inline-block
+    font-size: 0
+    position: relative
+.rating-input
+    float: right
+    height: 28px
+    padding: 0
+    opacity: 0
+    cursor: pointer
+.rating-star:hover,
+.rating-star:hover ~ .rating-star,
+.rating-input:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star
+    +sprite(star-lg-painted)
+.rating-star,
+.rating-star
+    display: block
+    float: right
+    margin-right: -10px
+    cursor: pointer
+    +sprite(star-lg-unpainted)
+
+
 
 .caret
     margin-left: 10px
@@ -411,198 +656,116 @@ $form-group-margin-bottom: 10px !default
     +sprite(q)
 
 
-.btn
-    +transition(all 0.5s ease 0s)
-    +border_radius(0)
-    outline: none
-.btn-default
-    background: #326cb5
-    border: 1px solid #326cb5
-    padding: 0 30px
-    line-height: 30px
-    font-size: 15px
-    color: #fff
-    &:hover, &:active, &:focus
-        background: #fff
-        border-color: #326cb5
-        color: #326cb5
-        &:visited
-            &:hover, &:active, &:focus
-                background: #fff
-                border-color: #326cb5
-                color: #326cb5
-.btn-lg
-    padding: 0 30px
-    line-height: 46px
-    font-size: 24px
-.btn-sm
-    padding: 0 30px
-    line-height: 32px
-    font-size: 15px
-.btn-xs
-    padding: 0 10px
-    line-height: 20px
-    text-transform: uppercase
-    font-size: 12px
-    +border_radius(5px)
-.btn-primary
-    padding: 0 20px
-    background: #fff
-    border: 1px solid #fff
-    line-height: 32px
-    font-size: 15px
-    color: #326cb5
-    +border_radius(8px)
-    &:hover, &:active, &:focus
-        background: #37389f
-        border-color: #37389f
-        text-decoration: none
-        color: #fff
-        &:visited
-            &:hover, &:active, &:focus
-                background: #37389f
-                border-color: #37389f
-                text-decoration: none
-                color: #fff
-.btn-info
-    padding: 0 35px
-    background: #326cb5
-    font-size: 20px
-    line-height: 36px
-    border: 2px solid transparent
-    cursor: pointer
-    &:hover, &:active, &:focus
-        background: transparent
-        border-color: #326cb5
-        text-decoration: none
-        color: #326cb5
-        &:visited
-            &:hover, &:active, &:focus
-                background: transparent
-                border-color: #326cb5
-                text-decoration: none
-                color: #326cb5
 
-
-.input-text, input[type="text"]
-    outline: none
-.input-text-default
-    padding: 0 10px
-    border: 1px solid #aaaaaa
-    height: 30px
-    font-size: 12px
-.input-text-sm
-    min-width: 58px
-    height: 24px
-.input-text-xs
-    width: 50px
-    height: 20px
-    padding: 0 5px
-    font-size: 12px
-    border: 2px solid #dadada
-    +border_radius(5px)
-.input-text-primary
-    vertical-align: middle
-    padding: 0 10px
-    border: 1px solid #fff
-    height: 34px
-    font-size: 15px
-    +border_radius(8px)
-    &::-webkit-input-placeholder
-        color: #9d9d9d
-    &::-moz-placeholder
-        color: #9d9d9d
-    &:-moz-placeholder
-        color: #9d9d9d
-    &:-ms-input-placeholder
-        color: #9d9d9d
-
-.radio
-    display: inline-block
-    padding-left: 25px
+.clean
+    width: auto
+    height: auto
+    background: none
+    padding: 0
     margin: 0
-    font-size: 15px
-    font-weight: normal
-    cursor: pointer
-.radio__switch
+    border: none
+    font-size: inherit
+
+.mb-5
+    margin-bottom: 5px
+.mb-10
+    margin-bottom: 10px
+.mb-15
+    margin-bottom: 15px
+.mb-20
+    margin-bottom: 20px
+.mb-25
+    margin-bottom: 25px
+.mb-30
+    margin-bottom: 30px
+.mb-35
+    margin-bottom: 35px
+.ml-10
+    margin-left: 10px
+.mr-5
+    margin-right: 5px
+.mr-10
+    margin-right: 10px
+.mr-20
+    margin-right: 20px
+
+.d-ib
+    display: inline-block
+.va-m
+    display: inline-block
+    vertical-align: middle
+.va-m-b
+    &::before
+        content: ""
+        display: inline-block
+        vertical-align: middle
+        height: 100%
+.abs-center
     position: absolute
     top: 50%
-    left: 0
-    -webkit-transform: translateY(-50%)
-    -moz-transform: translateY(-50%)
-    -ms-transform: translateY(-50%)
-    -o-transform: translateY(-50%)
-    transform: translateY(-50%)
-    outline: none
-    opacity: 0
-    &:checked + .radio__switch-imitator
-        &:before
-            width: 8px
-            height: 8px
-            opacity: 1
-.radio__switch-imitator
-    display: block
-    width: 16px
-    height: 16px
-    border: 1px solid #ababab
-    position: absolute
-    top: 50%
-    left: 0
-    -webkit-transform: translateY(-50%)
-    -moz-transform: translateY(-50%)
-    -ms-transform: translateY(-50%)
-    -o-transform: translateY(-50%)
-    transform: translateY(-50%)
-    +border_radius(50%)
-    &:before
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    -moz-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    -o-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+
+.p-r
+    position: relative
+
+.bg-light-gray
+    background: #eeeeee
+.bg-blue
+    background: #316cb3
+
+.bdr-b-gray
+    border-bottom: 1px solid #aaaaaa
+
+.bdr-r-a-gray
+    position: relative
+    &:after
         content: ""
         display: block
-        width: 16px
-        height: 16px
+        width: 1px
+        height: 100%
         background: #ababab
         position: absolute
-        top: 50%
-        left: 50%
-        -webkit-transform: translate(-50%, -50%)
-        -moz-transform: translate(-50%, -50%)
-        -ms-transform: translate(-50%, -50%)
-        -o-transform: translate(-50%, -50%)
-        transform: translate(-50%, -50%)
-        opacity: 0
-        +border_radius(50%)
-        +transition(all 0.5s ease 0s)
-input[type="radio"]
-    margin-top: 0
-.radio input[type="radio"]
-    margin-left: 0
+        top: 0
+        right: 2%
+.bdr-r-a-gradient
+    position: relative
+    &:after
+        content: ""
+        display: block
+        width: 1px
+        height: 220px
+        border-right: 1px solid #2863a5
+        background: #4c87cb
+        position: absolute
+        top: 0
+        right: 0
 
-.slider-horizontal
-    width: 238px
-    margin-bottom: 0
-.slider-track
-    height: 5px
-    background: #aaaaaa
-.slider-horizontal .slider-track
-    height: 5px
-.slider-horizontal .slider-selection
-    background: #aaaaaa
-.slider-horizontal
-    .slider-handle
-        margin-top: -7px
-        background: #316cb3
-        +border_radius(50%)
-    .slider-handle:last-child
-        background: #ff290b
-        +border_radius(50%)
-.tooltip
-    &.top
-        display: none
+.c-white
+    color: #fff
+.c-gray
+    color: #9d9d9d
+.c-blue
+    color: #316cb3
 
+.tt-u
+    text-transform: uppercase
+.td-u
+    text-decoration: underline
 
-.form-group
-    margin-bottom: $form-group-margin-bottom
-    > input
-        width: 100%
-        margin-bottom: 10px
-        &:last-child
-            margin-bottom: 0
+.fs-0
+    font-size: 0
+.fs-11
+    font-size: 11px
+.fs-12
+    font-size: 12px
+.fs-15
+    font-size: 15px
+.fs-20
+    font-size: 20px
+.fs-28
+    font-size: 28px
