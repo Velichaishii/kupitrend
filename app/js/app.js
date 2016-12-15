@@ -135,6 +135,35 @@ YOURAPPNAME.prototype.options = function(string) {
 
 var app = new YOURAPPNAME(document);
 
+app.appLoad('loading',function () {
+
+});
+
+app.appLoad('dom',function () {
+
+});
+
+function handleFiles(files) {
+    var UPList = document.getElementById("upload-photo__list");
+    for (var i=0; i < files.length; i++) {
+        var UPItem = document.createElement("div");
+        var UPBtn = document.createElement("div");
+        UPBtn.classList.add('upload-photo__btn-close');
+        UPItem.classList.add('upload-photo__item');
+        UPList.appendChild(UPItem);
+        UPItem.appendChild(UPBtn);
+
+
+        var img = document.createElement("img");
+        img.src = window.URL.createObjectURL(files[i]);
+        img.classList.add('upload-photo__img');
+        img.onload = function() {
+            window.URL.revokeObjectURL(this.src);
+        };
+        UPItem.appendChild(img);
+    }
+}
+
 app.appLoad('full', function () {
     $(".slider-range").each(function () {
         var slider = $(this);
@@ -147,28 +176,43 @@ app.appLoad('full', function () {
             $('#slider-range-start-price').val(slider.data('slider').value[0]);
             $('#slider-range-finish-price').val(slider.data('slider').value[1]);
         }, 500);
+        $(".owl-carousel").owlCarousel(
+            {
+                items: 3,
+                nav: true,
+                dots: false
+            }
+        );
+        $(document).on('click', '.upload-photo__btn-close', function(){
+            $(this).closest(".upload-photo__item").remove();
+        });
     });
 
-    var mouseX = 0, mouseY = 0;
 
-    $(document).mousemove(function(event) {
-        mouseX = event.pageX;
-        mouseY = event.pageY;
-    });
+    // var mouseX = 0, mouseY = 0;
+    //
+    // $(document).mousemove(function(event) {
+    //     mouseX = event.pageX;
+    //     mouseY = event.pageY;
+    // });
+    //
+    // $(".catalog-showcase__item").hover(function(e) {
+    //     var x  = mouseX - $(this).offset().left - 100;
+    //     var y = mouseY - $(this).offset().top - 100;
+    //     $(this).find('.gps_ring').css({
+    //         "left": x,
+    //         "top": y
+    //     }).show(0);
+    //
+    // }, function() {
+    // });
 
-    $(".catalog-showcase__item").hover(function(e) {
-        var x  = mouseX - $(this).offset().left - 100;
-        var y = mouseY - $(this).offset().top - 100;
-        $(this).find('.gps_ring').css({
-            "left": x,
-            "top": y
-        }).show(0);
 
-    }, function() {
-    });
 
     // $('.m-mh-half').matchHeight();
     // $('.m-mh-full').matchHeight();
+
+
 
     // Array.prototype.max = function() {
     //     return Math.max.apply(null, this);

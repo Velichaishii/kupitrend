@@ -4,7 +4,7 @@
 
 .navbar-right__item
     vertical-align: middle
-    margin-right: 15px
+    margin-right: 8px
     &:last-child
         margin-right: 0
 
@@ -33,7 +33,7 @@
     text-align: right
 .authorisation__inner
     display: inline-block
-    margin-right: 15px
+    margin-right: 9px
     &:last-child
         margin-right: 0
 .authorisation__link
@@ -128,8 +128,8 @@
     width: 100%
 .search__input
     width: 100%
-    height: 34px
-    padding: 0 35px 0 10px
+    height: 38px
+    padding: 0 35px 0 15px
     background: none
     border: none
     outline: none
@@ -143,10 +143,10 @@
     &:-ms-input-placeholder
         color: #fff
 .search__entry-field
-    border: 2px solid #fff
-    -webkit-border-radius: 10px
-    -moz-border-radius: 10px
-    border-radius: 10px
+    border: 1px solid #fff
+    -webkit-border-radius: 7px
+    -moz-border-radius: 7px
+    border-radius: 7px
     position: relative
 .search__btn
     width: 25px
@@ -173,7 +173,7 @@
 
 
 .logo
-    padding: 10px 0
+    padding: 5px 0
     align-items: center
     &.footer
         margin-bottom: 55px
@@ -191,7 +191,7 @@
 
 
 .info-box
-    padding: 10px 0
+    padding: 5px 0
 .info-box__item
     padding-right: 5px
 .info-box__text
@@ -202,7 +202,7 @@
 
 .call
     &.header
-        padding: 10px 0
+        padding: 5px 0
         margin-left: -5px
         margin-right: -5px
         > div
@@ -227,14 +227,14 @@
             display: inline-block
             width: calc(100% - 74px)
         .call__link
-            font-size: 28px
+            font-size: 30px
             +transition(all 0.5s ease 0s)
             &:hover, &:active, &:focus
-                color: #ff9900
+                color: #ff290b
                 text-decoration: none
             &:visited
                 &:hover, &:active, &:focus
-                    color: #ff9900
+                    color: #ff290b
                     text-decoration: none
 .call__link-wrap
     height: 50px
@@ -270,19 +270,19 @@
     background: #9d9d9d
 .banners-top__left
     .banners-top__img
-        padding-top: 48%
+        padding-top: 45.2%
 .banners-top__right
     .banners-top__img
-        padding-top: 97.5%
+        padding-top: 91.5%
 
 
 .sorting
-    padding: 25px 0 15px 0
+    padding: 23px 0 12px 0
 .sorting__list
     margin-bottom: 0
 .sorting__item
     display: inline-block
-    margin-right: 25px
+    margin-right: 15px
     &:last-child
         margin-right: 0
 .sorting__link
@@ -430,7 +430,7 @@
     &:last-child
         border-bottom: 0
 .catalog-filter__item-inner
-    padding: 15px
+    padding: 10px 15px
 .catalog-filter__item-header
     padding: 15px
     background: #eeeeee
@@ -448,8 +448,24 @@
     border: 1px solid #aaaaaa
     margin-bottom: 35px
     position: relative
-    overflow: hidden
     +transition(all 0.5s ease 0s)
+    &:before
+        content: ""
+        display: block
+        width: 100%
+        height: 100%
+        -webkit-box-shadow: 0 5px 25px #aaaaaa
+        -moz-box-shadow: 0 5px 25px #aaaaaa
+        box-shadow: 0 5px 25px #aaaaaa
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -10
+        opacity: 0
+        +transition(all 0.5s ease 0s)
+    &:hover
+        &:before
+            opacity: 1
 .catalog-showcase__item-header
     margin-bottom: 25px
 .catalog-showcase__link-name
@@ -465,7 +481,7 @@
     +transition(all 0.5s ease 0s)
 .catalog-showcase__link-img
     display: block
-    padding-top: 102%
+    padding-top: 100%
     margin-bottom: 10px
     position: relative
     overflow: hidden
@@ -480,7 +496,7 @@
     transform: translateZ(0)
 .catalog-showcase__service
     font-size: 0
-    margin-bottom: 15px
+    margin-bottom: 11px
 .catalog-showcase__service-inner
     display: inline-block
     width: 50%
@@ -547,10 +563,10 @@
     color: #000
     +transition(all 0.5s ease 0s)
     &:hover, &:active, &:focus
-        color: #ff9900
+        color: #ff290b
     &:visited
         &:hover, &:active, &:focus
-            color: #ff9900
+            color: #ff290b
 
 
 .page-body
@@ -581,17 +597,27 @@
     &:first-child
         .order__cell
             font-size: 12px
-.order__cell
+.order__left-column
     display: inline-block
     vertical-align: top
-    width: 15%
+    width: 55%
+    font-size: 0
+    > .order__cell:first-child
+        padding-left: 0
+.order__right-column
+    display: inline-block
+    vertical-align: top
+    width: 45%
+    font-size: 0
+    > .order__cell
+        width: 33.33%
+    > .order__cell:last-child
+        padding-right: 0
+.order__cell
+    display: inline-block
+    vertical-align: middle
     padding: 0 10px
     font-size: 15px
-    &:first-child
-        width: 55%
-        padding-left: 0
-    &:last-child
-        padding-right: 0
 .order__img
     float: left
     width: 100px
@@ -623,9 +649,152 @@
     width: calc(100% - 180px)
     font-size: 12px
     color: #9d9d9d
+.upload-photo__list
+    margin-bottom: 20px
+    font-size: 0
+.upload-photo__item
+    display: inline-block
+    vertical-align: top
+    width: 15.65%
+    height: 80px
+    margin-right: 10px
+    margin-bottom: 10px
+    position: relative
+    overflow: hidden
+    &:nth-child(6n)
+        margin-right: 0
+.upload-photo__btn-close
+    display: block
+    width: 15px
+    height: 15px
+    position: absolute
+    top: 5px
+    right: 5px
+    z-index: 1
+    cursor: pointer
+    &:before
+        content: ""
+        display: block
+        width: 15px
+        height: 2px
+        background: #aaaaaa
+        top: 5px
+        position: absolute
+        left: 0
+        transform: rotate(-45deg)
+        +transition(all 0.5s ease 0s)
+    &:after
+        content: ""
+        display: block
+        width: 15px
+        height: 2px
+        background: #aaaaaa
+        position: absolute
+        top: 5px
+        left: 0
+        transform: rotate(45deg)
+        +transition(all 0.5s ease 0s)
+    &:hover
+        &:before
+            background: #fff
+        &:after
+            background: #fff
+.upload-photo__img
+    display: block
+    width: auto
+    height: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    -moz-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    -o-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
 
 .pay-soc-wrap
     padding: 10px 25px
+
+.product-card
+    margin-bottom: 25px
+.product-card__photo-big
+    height: 327px
+    border: 1px solid #aaaaaa
+    margin-bottom: 20px
+    overflow: hidden
+.product-card__photo-small
+    display: flex
+    width: 90px
+    height: 90px
+    border: 1px solid #aaaaaa
+    margin: 0 auto
+    align-items: center
+    position: relative
+    cursor: pointer
+    +transition(all 0.3s ease 0s)
+    &:before
+        content: ""
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -10
+        opacity: 0
+        +transition(all 0.3s ease 0s)
+    &:hover, &:focus
+        border-color: #316cb3
+        &:before
+            background: #000
+            z-index: 10
+            opacity: 0.1
+
+.owl-carousel
+    &.product-card__photos-small
+        padding: 0 15px
+        .owl-nav
+            .owl-prev
+                display: block
+                border-right: 9px dashed #aaaaaa
+                border-top: 7px solid transparent
+                border-bottom: 7px solid transparent
+                position: absolute
+                top: 50%
+                left: 0
+                -webkit-transform: translateY(-50%)
+                -moz-transform: translateY(-50%)
+                -ms-transform: translateY(-50%)
+                -o-transform: translateY(-50%)
+                transform: translateY(-50%)
+                font-size: 0
+                +transition(all 0.5s ease 0s)
+                &:hover
+                    border-right: 9px dashed #316cb3
+            .owl-next
+                display: block
+                border-left: 9px dashed #aaaaaa
+                border-top: 7px solid transparent
+                border-bottom: 7px solid transparent
+                position: absolute
+                top: 50%
+                right: 0
+                -webkit-transform: translateY(-50%)
+                -moz-transform: translateY(-50%)
+                -ms-transform: translateY(-50%)
+                -o-transform: translateY(-50%)
+                transform: translateY(-50%)
+                font-size: 0
+                +transition(all 0.5s ease 0s)
+                &:hover
+                    border-left: 9px dashed #316cb3
+.product-card__img-big-wrap
+    display: flex
+    height: 327px
+    align-items: center
+.product-card__img-big
+    width: 100%
+    height: auto
 
 
 .payments
@@ -666,7 +835,7 @@
         width: 100%
 .subscription__link
     text-decoration: underline
-    font-size: 16px
+    font-size: 15px
     color: #fff
     +transition(all 0.5s ease 0s)
     &:hover, &:active, &:focus
@@ -674,7 +843,6 @@
     &:visited
         &:hover, &:active, &:focus
             color: #ff9900
-
 
 .counter
     display: inline-block
