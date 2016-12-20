@@ -3,15 +3,6 @@
 
 
 
-$container-large-desktop: 1200px
-$form-group-margin-bottom: 10px !default
-
-
-
-.container
-    width: $container-large-desktop
-
-
 .page-header
     padding-bottom: 0
     margin: 0
@@ -79,11 +70,19 @@ $form-group-margin-bottom: 10px !default
                             background: transparent
                             color: #ff9900
 
+
+.navbar-header
+    float: left
+.container > .navbar-header
+    margin: 0
+
 .navbar-collapse
     padding: 5px 0
+    float: left
     &.collapse
-        display: inline-block !important
         padding-bottom: 0
+
+
 
 .navbar-nav > .navbar__item > .navbar__link
     padding: 0
@@ -100,8 +99,68 @@ $form-group-margin-bottom: 10px !default
     display: inline-block
 
 .navbar-right
+    float: right
     padding-top: 2px
     margin-right: 0
+
+.navbar-toggle
+    width: 38px
+    padding: 0
+    margin: 3px 0 0 0
+.navbar-toggle .icon-bar
+    width: 100%
+    height: 4px
+    background: #316cb3
+    +border-radius(2px)
+.navbar-toggle .icon-bar + .icon-bar
+    margin-top: 5px
+
+.nav-tabs
+    border-bottom: none
+    > li
+        margin-bottom: 0
+        border: 1px solid #aaaaaa
+        border-right: 0
+        &:last-child
+            border-right: 1px solid #aaaaaa
+        > a
+            padding: 15px
+            background: #eeeeee
+            margin: 0
+            border: none
+            text-align: center
+            color: #000
+            +border_radius(0)
+            &:hover, &:focus
+                color: #000
+                background: #eeeeee
+                border: none
+            &:active
+                background: #fff
+                border: none
+            &:visited
+                &:hover, &:focus
+                    color: #000
+                    background: #eeeeee
+                    border: none
+                &:active
+                    background: #fff
+                    border: none
+    >li.active > a
+        background: #fff
+        border: none
+        &:hover, &:focus
+            border: none
+        &:active
+            border: none
+        &:visited
+            background: #fff
+            &:hover, &:focus
+                border: none
+            &:active
+                border: none
+    > .nav-tabs__item
+        width: 25%
 
 
 .page-footer
@@ -225,20 +284,6 @@ a
                 background: #fff
                 border-color: #316cb3
                 color: #316cb3
-.btn-lg
-    padding: 0 30px
-    line-height: 44px
-    font-size: 20px
-.btn-sm
-    padding: 0 30px
-    line-height: 32px
-    font-size: 15px
-.btn-xs
-    padding: 0 10px
-    line-height: 18px
-    text-transform: uppercase
-    font-size: 11px
-    +border_radius(5px)
 .btn-primary
     padding: 0 20px
     background: #fff
@@ -276,6 +321,27 @@ a
                 border-color: #316cb3
                 text-decoration: none
                 color: #316cb3
+.btn-lg
+    border: 2px solid transparent
+    padding: 0 30px
+    line-height: 44px
+    font-size: 20px
+.btn-sm
+    padding: 0 30px
+    line-height: 32px
+    font-size: 15px
+.btn-ss
+    border: 1px solid transparent
+    padding: 0 20px
+    line-height: 26px
+    font-size: 15px
+.btn-xs
+    padding: 0 10px
+    line-height: 18px
+    text-transform: uppercase
+    font-size: 11px
+    +border_radius(5px)
+
 
 
 .input-text, input[type="text"]
@@ -693,16 +759,37 @@ label
 .icon-minus
     +sprite(minus)
 
+.stars-sm-painted
+    margin-bottom: 7px
+.icon-star-sm-painted
+    +sprite(star-sm-painted)
 .stars-md-unpainted
     text-align: center
     margin-bottom: 7px
 .icon-star-md-unpainted
     +sprite(star-md-unpainted)
+.icon-star-lg-painted
+    +sprite(star-lg-painted)
+.stars-lg-unpainted
+    display: inline-block
+.icon-star-lg-unpainted
+    +sprite(star-lg-unpainted)
+
 
 .icon-comment
     +sprite(comment)
 .icon-plus-blue
     +sprite(plus-blue)
+
+.icon-comment-blue
+    +sprite(comment-blue)
+    +transition(all 0.5s ease 0s)
+.icon-finger-up
+    +sprite(finger-up-blue)
+    +transition(all 0.5s ease 0s)
+.icon-finger-down
+    +sprite(finger-down-blue)
+    +transition(all 0.5s ease 0s)
 
 .icon-tel-white
     +sprite(tel-white)
@@ -779,6 +866,8 @@ label
 
 .bdr-b-gray
     border-bottom: 1px solid #aaaaaa
+.bdr-r-gray
+    border-right: 1px solid #aaaaaa
 
 .bdr-r-a-gray
     position: relative
@@ -811,6 +900,10 @@ label
     color: #9d9d9d
 .c-blue
     color: #316cb3
+.c-red
+    color: #de1f1f
+.c-green
+    color: #74a83f
 
 .tt-u
     text-transform: uppercase
@@ -825,9 +918,44 @@ label
     font-size: 12px
 .fs-15
     font-size: 15px
+.fs-16
+    font-size: 16px
 .fs-19
     font-size: 19px
 .fs-20
     font-size: 20px
 .fs-28
     font-size: 28px
+
+@media (min-width: 1200px)
+    .container
+        width: $container-large-desktop
+@media (max-width: 1999px)
+    .navbar-collapse
+        float: none
+        background: #eeeeee
+        width: 320px
+        height: 100%
+        padding: 0
+        margin: 0
+        position: fixed
+        top: 0
+        left: -320px
+        z-index: 10
+        &.collapse
+            display: block !important
+        &.in
+            left: 0
+    .navbar-nav
+        margin: 0
+        > .navbar__item
+            > .navbar__link
+                padding: 20px
+    .navbar
+        &.header
+            .navbar__item
+                display: block
+                padding: 0
+                &:after
+                    content: ""
+                    display: none
