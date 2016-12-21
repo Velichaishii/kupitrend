@@ -176,17 +176,57 @@ app.appLoad('full', function () {
             $('#slider-range-start-price').val(slider.data('slider').value[0]);
             $('#slider-range-finish-price').val(slider.data('slider').value[1]);
         }, 500);
-        $(".owl-carousel").owlCarousel(
-            {
-                items: 3,
-                nav: true,
-                dots: false
-            }
-        );
-        $(document).on('click', '.upload-photo__btn-close', function(){
-            $(this).closest(".upload-photo__item").remove();
-        });
     });
+    $(".product-card__photos-small").owlCarousel(
+        {
+            items: 3,
+            nav: true,
+            dots: false,
+            margin: 10
+        }
+    );
+    $(".products__gallery").owlCarousel(
+        {
+            items: 1,
+            nav: true,
+            dots: false,
+            responsive: {
+                480: {
+                    items: 2
+                },
+                640: {
+                    items: 3
+                },
+                768: {
+                    items: 2
+                },
+                880: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                }
+            }
+        }
+    );
+    $(document).on('click', '.upload-photo__btn-close', function(){
+        $(this).closest(".upload-photo__item").remove();
+    });
+
+    function transfer() {
+        var sortinDiv = $(".sorting");
+
+        if (viewport().width <= 767) {
+            sortinDiv.insertAfter(".page-body__sidebar");
+        } else {
+            sortinDiv.insertAfter(".banners-top");
+        }
+    }
+
+    $(window).resize(function () {
+        transfer();
+    });
+    transfer();
 
 
     // var mouseX = 0, mouseY = 0;
@@ -249,3 +289,12 @@ app.appLoad('full', function () {
     //     matchHeightElems('m-mh-half');
     // });
 });
+
+function viewport() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}

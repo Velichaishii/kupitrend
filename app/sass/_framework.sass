@@ -3,6 +3,11 @@
 
 
 
+.container
+    width: auto
+
+
+
 .page-header
     padding-bottom: 0
     margin: 0
@@ -44,13 +49,14 @@
                     display: none
             > .navbar__link
                 color: #316cb3
+                font-size: 11px
                 &:hover, &:active, &:focus
                     background: transparent
                     color: #fd2f08
-                    &:visited
-                        &:hover, &:active, &:focus
-                            background: transparent
-                            color: #fd2f08
+                &:visited
+                    &:hover, &:active, &:focus
+                        background: transparent
+                        color: #fd2f08
     &.footer
         padding: 10px 20px
         .navbar__item
@@ -77,8 +83,12 @@
     margin: 0
 
 .navbar-collapse
-    padding: 5px 0
+    display: block
     float: left
+    width: auto
+    height: auto
+    padding: 5px 0
+    position: static
     &.collapse
         padding-bottom: 0
 
@@ -107,13 +117,41 @@
     width: 38px
     padding: 0
     margin: 3px 0 0 0
-.navbar-toggle .icon-bar
-    width: 100%
-    height: 4px
-    background: #316cb3
-    +border-radius(2px)
-.navbar-toggle .icon-bar + .icon-bar
-    margin-top: 5px
+.navbar-toggle
+    .icon-bar
+        width: 100%
+        height: 4px
+        background: #316cb3
+        +border-radius(2px)
+    .icon-bar + .icon-bar
+        margin-top: 5px
+
+.navbar-toggle-close
+    width: 32px
+    height: 32px
+    margin-right: 15px
+    padding: 0
+    background: none
+    border: none
+    outline: none
+.navbar-toggle-close
+    .icon-bar
+        display: block
+        width: 32px
+        height: 4px
+        background: #316cb3
+        -webkit-transform: rotate(-45deg)
+        -moz-transform: rotate(-45deg)
+        -ms-transform: rotate(-45deg)
+        -o-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+        + .icon-bar
+            margin-top: -4px
+            -webkit-transform: rotate(45deg)
+            -moz-transform: rotate(45deg)
+            -ms-transform: rotate(45deg)
+            -o-transform: rotate(45deg)
+            transform: rotate(45deg)
 
 .nav-tabs
     border-bottom: none
@@ -930,32 +968,3 @@ label
 @media (min-width: 1200px)
     .container
         width: $container-large-desktop
-@media (max-width: 1999px)
-    .navbar-collapse
-        float: none
-        background: #eeeeee
-        width: 320px
-        height: 100%
-        padding: 0
-        margin: 0
-        position: fixed
-        top: 0
-        left: -320px
-        z-index: 10
-        &.collapse
-            display: block !important
-        &.in
-            left: 0
-    .navbar-nav
-        margin: 0
-        > .navbar__item
-            > .navbar__link
-                padding: 20px
-    .navbar
-        &.header
-            .navbar__item
-                display: block
-                padding: 0
-                &:after
-                    content: ""
-                    display: none

@@ -16,6 +16,8 @@
     list-style: none
     text-align: center
     font-size: 0
+    &.footer
+        text-align: center
 .soc__item
     margin-right: 5px
     display: inline-block
@@ -90,6 +92,7 @@
     min-height: 52px
 .service__list
     display: inline-block
+    float: right
     min-height: 52px
     margin-bottom: 0
     list-style: none
@@ -177,6 +180,16 @@
     align-items: center
     &.footer
         margin-bottom: 55px
+    &.burger-menu
+        padding: 15px
+        background: #eeeeee
+        position: absolute
+        bottom: 0
+        left: 0
+        text-align: center
+        .logo__link
+            width: auto
+            display: inline-block
 .logo__link
     display: block
     width: 335px
@@ -239,7 +252,7 @@
 .call__link-wrap
     height: 50px
 .call__toggle
-    display: block
+    display: inline-block
     font-size: 0
     cursor: pointer
 .call__link
@@ -501,6 +514,8 @@
     display: inline-block
     width: 50%
     font-size: 14px
+    &:last-child
+        text-align: right
 .catalog-showcase__link
     display: inline-block
     text-decoration: underline
@@ -572,6 +587,13 @@
 
 .page-body
     margin-bottom: 35px
+.page-body__sidebar
+    float: left
+    width: 300px
+    padding-right: 30px
+.page-body__content
+    float: right
+    width: calc(100% - 300px)
 .page-body__content-inner
     padding: 20px 20px 35px 20px
     border: 1px solid #aaaaaa
@@ -598,33 +620,32 @@
     &:first-child
         .order__cell
             font-size: 12px
-.order__left-column
-    display: inline-block
-    vertical-align: top
-    width: 55%
-    font-size: 0
-    > .order__cell:first-child
-        padding-left: 0
-.order__right-column
-    display: inline-block
-    vertical-align: top
-    width: 45%
-    font-size: 0
-    > .order__cell
-        width: 33.33%
-    > .order__cell:last-child
-        padding-right: 0
 .order__cell
     display: inline-block
-    vertical-align: middle
+    vertical-align: top
+    width: 15%
     padding: 0 10px
     font-size: 15px
-.order__img
+    line-height: 26px
+    &:first-child
+        width: 55%
+        padding-left: 0
+    &:nth-child(4n)
+        padding-right: 0
+.order__img-link
+    display: block
     float: left
     width: 100px
     height: 80px
+    position: relative
+    overflow: hidden
     margin-right: 15px
-    background: #9d9d9d
+.order__img-bg
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
 .order__right-b
     display: inline-block
     width: 270px
@@ -634,12 +655,20 @@
         margin-bottom: 10px
     .btn-lg
         width: 100%
+.order-rating__row
+    margin-bottom: 10px
+.order-rating__left-col
+    float: left
+.order-rating__right-col
+    display: inline-block
+    padding-top: 5px
 
 
 .upload-photo
     font-size: 0
     margin-bottom: 35px
 .upload-photo__left-b
+    float: left
     display: inline-block
     vertical-align: top
     width: 180px
@@ -719,17 +748,23 @@
 .product-card
     margin-bottom: 25px
 .product-card__photo-big
-    height: 327px
+    padding-top: 100%
     border: 1px solid #aaaaaa
     margin-bottom: 20px
+    position: relative
     overflow: hidden
+.product-card__photo-bg
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
 .product-card__photo-small
-    display: flex
-    width: 90px
-    height: 90px
+    display: block
+    padding-top: 100%
     border: 1px solid #aaaaaa
     margin: 0 auto
-    align-items: center
     position: relative
     cursor: pointer
     +transition(all 0.3s ease 0s)
@@ -814,9 +849,22 @@
     margin-top: -10px
     font-size: 25px
     color: #316cb3
+
+
+
 .product-info
     .nav-tabs
+        display: flex
+        align-items: stretch
         margin-bottom: 30px
+    .nav-tabs__item
+        display: flex
+        align-items: stretch
+    .nav-tabs__link
+        display: flex
+        width: 100%
+        align-items: center
+        justify-content: center
     .tab-content
         margin-bottom: 20px
 .product-info__table-charact
@@ -827,6 +875,7 @@
 .product-info__table-charact-cell
     font-size: 13px
     display: inline-block
+    vertical-align: top
     &.left
         width: 35%
         color: #aaaaaa

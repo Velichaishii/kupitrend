@@ -7,12 +7,12 @@
         <section class="banners-top">
             <div class="container">
                 <div class="row banners-top__row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
                         <div class="banners-top__left">
                             <div class="banners-top__img"></div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-4 hidden-xs">
                         <div class="banners-top__right">
                             <div class="banners-top__img"></div>
                         </div>
@@ -35,17 +35,13 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <section class="page-body__main">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        {% include "layouts/sidebar.twig" %}
-                    </div>
-                    <div class="col-md-9">
-                        <div class="page-body__content">
-                            {% include "layouts/catalog.twig" %}
-                        </div>
-                    </div>
+                <div class="page-body__sidebar">
+                    {% include "layouts/sidebar.twig" %}
+                </div>
+                <div class="page-body__content">
+                    {% include "layouts/catalog.twig" %}
                 </div>
             </div>
         </section>

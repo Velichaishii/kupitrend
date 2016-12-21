@@ -1,104 +1,88 @@
 {% extends "layouts/app.twig" %}
 
-{% block pageTitle %}Условия оплаты{% endblock %}
+{% block pageTitle %}Корзина{% endblock %}
 
 {% block content %}
     {% include "layouts/breadcrumbs.twig" %}
     <div class="page-body">
         <section>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        {% include "layouts/sidebar.twig" %}
-                    </div>
-                    <div class="col-md-9">
-                        <div class="page-body__content">
-                            <div class="page-body__content-inner m-mh-half order">
-                                <div class="bdr-b-gray mb-25 p-r">
-                                    <h2 class="h2 tt-u">Корзина</h2>
-                                    <span class="order__quantity">(2 товара(ов))</span>
-                                </div>
-                                <div class="order__table">
-                                    <div class="order__row bdr-b-gray c-gray">
-                                        <div class="order__left-column">
-                                            <div class="order__cell">Наименование и описание</div>
-                                        </div>
-                                        <div class="order__right-column">
-                                            <div class="order__cell">Количество</div>
-                                            <div class="order__cell">Цена</div>
-                                            <div class="order__cell">Сумма</div>
-                                        </div>
-                                    </div>
-                                    <div class="order__row">
-                                        <div class="order__left-column">
-                                            <div class="order__cell">
-                                                <img class="order__img" src="" alt="" title="">
-                                                <span class="va-t">Название товара</span>
-                                            </div>
-                                        </div>
-                                        <div class="order__right-column">
-                                            <div class="order__cell">
-                                                <input type="text" class="input-text input-text-default input-text-sm mr-10" title="Количество">шт.
-                                            </div>
-                                            <div class="order__cell"><span>500 тг.</span>/шт.</div>
-                                            <div class="order__cell">1 500 тг.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="order__table">
-                                    <div class="order__row bdr-b-gray c-gray">
-                                        <div class="order__left-column">
-                                            <div class="order__cell">Наименование и описание</div>
-                                        </div>
-                                        <div class="order__right-column">
-                                            <div class="order__cell">Количество</div>
-                                            <div class="order__cell">Цена</div>
-                                            <div class="order__cell">Сумма</div>
-                                        </div>
-                                    </div>
-                                    <div class="order__row">
-                                        <div class="order__left-column">
-                                            <div class="order__cell">
-                                                <img class="order__img" src="" alt="" title="">
-                                                <span class="va-t">Название товара</span>
-                                            </div>
-                                        </div>
-                                        <div class="order__right-column">
-                                            <div class="order__cell">
-                                                <input type="text" class="input-text input-text-default input-text-sm mr-10" title="Количество">шт.
-                                            </div>
-                                            <div class="order__cell"><span>500 тг.</span>/шт.</div>
-                                            <div class="order__cell">1 500 тг.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <form method="post">
-                                    <div class="bdr-b-gray mb-15 text-right">
-                                        <div class="order__right-b">
-                                            <p class="fs-15 mb-35">Стоимость товаров: <span>3 000 тг.</span></p>
-                                            <p class="fs-15">Выберите способ доставки:</p>
-                                            <select class="selectpicker" title="Способ доствки">
-                                                <option value="Самовывоз" selected>Самовывоз из магазина</option>
-                                                <option value="Доставка">Доставка</option>
-                                            </select>
-                                            <p class="fs-12 clean">Стоимость доставки: <span>0 тг.</span></p>
-                                            <p class="fs-12 mb-20">Срок доставки: 0 дней</p>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="order__right-b">
-                                            <div class="c-blue">
-                                                <p class="fs-15 mb-10">Итоговая стоимость</p>
-                                                <p class="fs-28 mb-20">3 000 тг.</p>
-                                                <button class="btn btn-default btn-lg">Оформить заказ</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                <div class="page-body__sidebar">
+                    {% include "layouts/sidebar.twig" %}
+                </div>
+                <div class="page-body__content">
+                        <div class="page-body__content-inner m-mh-half order">
+                            <div class="bdr-b-gray mb-25 p-r">
+                                <h2 class="h2 tt-u">Корзина</h2>
+                                <span class="order__quantity">(2 товара(ов))</span>
                             </div>
+                            <div class="order__table">
+                                <div class="order__row bdr-b-gray c-gray">
+                                    <div class="order__cell">Наименование и описание</div>
+                                    <div class="order__cell">Количество</div>
+                                    <div class="order__cell">Цена</div>
+                                    <div class="order__cell">Сумма</div>
+                                </div>
+                                <div class="order__row">
+                                    <div class="order__cell">
+                                        <a class="order__img-link" href="#">
+                                            <i class="order__img-bg" style="background: url(images/asus-zenfone-selfie-zd551kl-sheer-gold.jpg) no-repeat center center; background-size: contain"></i>
+                                        </a>
+                                        <span class="va-t">Название товара</span>
+                                    </div>
+                                    <div class="order__cell">
+                                        <input type="text" class="input-text input-text-default input-text-sm mr-10" title="Количество">шт.
+                                    </div>
+                                    <div class="order__cell"><span>500 тг.</span>/шт.</div>
+                                    <div class="order__cell">1 500 тг.</div>
+                                </div>
+                            </div>
+                            <div class="order__table">
+                                <div class="order__row bdr-b-gray c-gray">
+                                    <div class="order__cell">Наименование и описание</div>
+                                    <div class="order__cell">Количество</div>
+                                    <div class="order__cell">Цена</div>
+                                    <div class="order__cell">Сумма</div>
+                                </div>
+                                <div class="order__row">
+                                    <div class="order__cell">
+                                        <a class="order__img-link" href="#">
+                                            <i class="order__img-bg" style="background: url(images/asus-zenfone-selfie-zd551kl-sheer-gold.jpg) no-repeat center center; background-size: contain"></i>
+                                        </a>
+                                        <span class="va-t">Название товара</span>
+                                    </div>
+                                    <div class="order__cell">
+                                        <input type="text" class="input-text input-text-default input-text-sm mr-10" title="Количество">шт.
+                                    </div>
+                                    <div class="order__cell"><span>500 тг.</span>/шт.</div>
+                                    <div class="order__cell">1 500 тг.</div>
+                                </div>
+                            </div>
+                            <form method="post">
+                                <div class="bdr-b-gray mb-15 text-right">
+                                    <div class="order__right-b">
+                                        <p class="fs-15 mb-35">Стоимость товаров: <span>3 000 тг.</span></p>
+                                        <p class="fs-15">Выберите способ доставки:</p>
+                                        <select class="selectpicker" title="Способ доствки">
+                                            <option value="Самовывоз" selected>Самовывоз из магазина</option>
+                                            <option value="Доставка">Доставка</option>
+                                        </select>
+                                        <p class="fs-12 clean">Стоимость доставки: <span>0 тг.</span></p>
+                                        <p class="fs-12 mb-20">Срок доставки: 0 дней</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="order__right-b">
+                                        <div class="c-blue">
+                                            <p class="fs-15 mb-10">Итоговая стоимость</p>
+                                            <p class="fs-28 mb-20">3 000 тг.</p>
+                                            <button class="btn btn-default btn-lg">Оформить заказ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     </div>
