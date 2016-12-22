@@ -7358,7 +7358,7 @@ button.close {
 .navbar.header .navbar__item {
   display: inline-block;
   max-width: 760px;
-  padding: 0 8px;
+  padding: 0 5px;
 }
 .navbar.header .navbar__item:after {
   content: "";
@@ -7597,7 +7597,7 @@ button.close {
 .h4, h4 {
   margin-top: 0;
   margin-bottom: 20px;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .h5, h5 {
@@ -9995,11 +9995,11 @@ label {
   transition: all 0.5s ease 0s;
 }
 .call.footer .call__link:hover, .call.footer .call__link:active, .call.footer .call__link:focus {
-  color: #ff290b;
+  color: #ff9900;
   text-decoration: none;
 }
 .call.footer .call__link:visited:hover, .call.footer .call__link:visited:active, .call.footer .call__link:visited:focus {
-  color: #ff290b;
+  color: #ff9900;
   text-decoration: none;
 }
 
@@ -11130,7 +11130,7 @@ label {
 }
 .product-info__table-charact-cell.left {
   width: 32%;
-  color: #aaaaaa;
+  color: #8c8c8c;
 }
 .product-info__table-charact-cell.right {
   width: 68%;
