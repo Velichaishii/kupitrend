@@ -167,16 +167,20 @@ function handleFiles(files) {
 app.appLoad('full', function () {
     $(".slider-range").each(function () {
         var slider = $(this);
+        var sliderStart = $('#slider-range-start-price');
+        var sliderFinish = $('#slider-range-finish-price');
+
         slider.slider();
         slider.on("slide", function (slideEvt) {
-            $('#slider-range-start-price').val(slideEvt.value[0]);
-            $('#slider-range-finish-price').val(slideEvt.value[1]);
+            sliderStart.val(slideEvt.value[0]);
+            sliderFinish.val(slideEvt.value[1]);
         });
         setTimeout(function () {
-            $('#slider-range-start-price').val(slider.data('slider').value[0]);
-            $('#slider-range-finish-price').val(slider.data('slider').value[1]);
+            sliderStart.val(slider.data('slider').value[0]);
+            sliderFinish.val(slider.data('slider').value[1]);
         }, 500);
     });
+
     $(".product-card__photos-small").owlCarousel(
         {
             items: 3,
@@ -185,6 +189,7 @@ app.appLoad('full', function () {
             margin: 10
         }
     );
+
     $(".products__gallery").owlCarousel(
         {
             items: 1,
@@ -209,6 +214,7 @@ app.appLoad('full', function () {
             }
         }
     );
+
     $(document).on('click', '.upload-photo__btn-close', function(){
         $(this).closest(".upload-photo__item").remove();
     });
@@ -222,72 +228,33 @@ app.appLoad('full', function () {
             sortinDiv.insertAfter(".banners-top");
         }
     }
-
     $(window).resize(function () {
         transfer();
     });
     transfer();
 
+    function deploy() {
+        var catalogUl = $("#catalog-nav__list");
+        var filterDiv = $("#catalog-filter__list");
 
-    // var mouseX = 0, mouseY = 0;
-    //
-    // $(document).mousemove(function(event) {
-    //     mouseX = event.pageX;
-    //     mouseY = event.pageY;
-    // });
-    //
-    // $(".catalog-showcase__item").hover(function(e) {
-    //     var x  = mouseX - $(this).offset().left - 100;
-    //     var y = mouseY - $(this).offset().top - 100;
-    //     $(this).find('.gps_ring').css({
-    //         "left": x,
-    //         "top": y
-    //     }).show(0);
-    //
-    // }, function() {
-    // });
-
-
-
-    // $('.m-mh-half').matchHeight();
-    // $('.m-mh-full').matchHeight();
-
-
-
-    // Array.prototype.max = function() {
-    //     return Math.max.apply(null, this);
-    // };
-    // Array.prototype.min = function() {
-    //     return Math.min.apply(null, this);
-    // };
-    //
-    // var matchHeightElems = function (elemClass) {
-    //     var elems = document.getElementsByClassName(elemClass),
-    //         heightsArray = [];
-    //     for(var i=0; i<elems.length; i++) {
-    //         heightsArray.push(elems[i].clientHeight);
-    //     }
-    //     $('.' + elemClass).each(function () {
-    //         $(this).css({
-    //             'min-height': heightsArray.max()
-    //         }) ;
-    //     });
-    // };
-    //
-    // matchHeightElems('m-mh-full');
-    // matchHeightElems('m-mh-half');
-    //
-    // $('.catalog-nav__list').on('shown.bs.collapse', function (e) {
-    //     matchHeightElems('m-mh-full');
-    // }).on('hidden.bs.collapse', function (e) {
-    //     matchHeightElems('m-mh-full');
-    // });
-    //
-    // $('.catalog-nav__list').on('shown.bs.collapse', function (e) {
-    //     matchHeightElems('m-mh-half');
-    // }).on('hidden.bs.collapse', function (e) {
-    //     matchHeightElems('m-mh-half');
-    // });
+        if (viewport().width <= 767) {
+            catalogUl.removeClass("in");
+            filterDiv.removeClass("in");
+        } else {
+            catalogUl.addClass("in");
+            filterDiv.addClass("in");
+            catalogUl.css({
+                height: 'auto'
+            });
+            filterDiv.css({
+                height: 'auto'
+            });
+        }
+    }
+    $(window).resize(function () {
+        deploy();
+    });
+    deploy();
 });
 
 function viewport() {

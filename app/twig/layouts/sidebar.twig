@@ -1,16 +1,16 @@
 <div class="catalog-nav">
-    <div class="catalog-nav__header">
+    <a class="catalog-sidebar__header" data-toggle="collapse" data-parent="#accordion" href="#catalog-nav__list">
         <span class="catalog-nav__icon">
             <i class="icon icon-catalog"></i>
         </span>
         Каталог товаров
-    </div>
-    <ul class="catalog-nav__list">
+    </a>
+    <ul id="catalog-nav__list" class="catalog-nav__list collapse in">
         <li class="catalog-nav__item fst-lvl">
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-gadget mr-10"></i>
+                        <i class="icon icon-gadget"></i>
                     </span>
                     Гаджеты и аксессуары
                 </a>
@@ -34,7 +34,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-clock mr-10"></i>
+                        <i class="icon icon-clock"></i>
                     </span>
                         Часы
                 </a>
@@ -58,7 +58,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-cream mr-10"></i>
+                        <i class="icon icon-cream"></i>
                     </span>
                     Красота и здоровье
                 </a>
@@ -82,7 +82,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-sport mr-10"></i>
+                        <i class="icon icon-sport"></i>
                     </span>
                         Спорт и отдых
                 </a>
@@ -92,7 +92,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-mouse mr-10"></i>
+                        <i class="icon icon-mouse"></i>
                     </span>
                     1000 мелочей
                 </a>
@@ -102,7 +102,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-wheel mr-10"></i>
+                        <i class="icon icon-wheel"></i>
                     </span>
                     Автоаксессуары
                 </a>
@@ -126,7 +126,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-purse mr-10"></i>
+                        <i class="icon icon-purse"></i>
                     </span>
                     Модные аксессуары
                 </a>
@@ -150,7 +150,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-toy mr-10"></i>
+                        <i class="icon icon-toy"></i>
                     </span>
                     Детские игрушки
                 </a>
@@ -160,7 +160,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-headphones mr-10"></i>
+                        <i class="icon icon-headphones"></i>
                     </span>
                     Продукция Remax
                 </a>
@@ -170,7 +170,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-lamp mr-10"></i>
+                        <i class="icon icon-lamp"></i>
                     </span>
                     Светодиодное освещение
                 </a>
@@ -180,7 +180,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-instruments mr-10"></i>
+                        <i class="icon icon-instruments"></i>
                     </span>
                     Инструменты
                 </a>
@@ -190,7 +190,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-gift-gray mr-10"></i>
+                        <i class="icon icon-gift-gray"></i>
                     </span>
                     Новогодние товары
                 </a>
@@ -214,7 +214,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-bed mr-10"></i>
+                        <i class="icon icon-bed"></i>
                     </span>
                     Текстиль
                 </a>
@@ -224,7 +224,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-cigarette mr-10"></i>
+                        <i class="icon icon-cigarette"></i>
                         </span>
                         Товары для вейпинга
                 </a>
@@ -248,7 +248,7 @@
             <div class="catalog-nav__link-wrap">
                 <a class="catalog-nav__link" href="#">
                     <span class="catalog-nav__icon">
-                        <i class="icon icon-glasses mr-10"></i>
+                        <i class="icon icon-glasses"></i>
                     </span>
                     Виртуальная реальность
                 </a>
@@ -257,58 +257,66 @@
     </ul>
 </div>
 <div class="catalog-filter">
-    <div class="catalog-filter__item">
-        <div class="catalog-filter__item-header">
-            <h5 class="h5 clean">Выбор по параметрам</h5>
-        </div>
-        <div class="catalog-filter__item-inner">
-            <p class="fs-15 mb-10">Цена</p>
-            <form class="catalog-filter__form">
-                <div class="mb-15">
-                    <span class="fs-11">от</span>
-                    <span class="catalog-filter__input-text-wrap">
-                        <input type="text" id="slider-range-start-price" class="input-text input-text-default input-text-xs" title="от" data-input-value="">
-                    </span>
-                    <span class="fs-11">до</span>
-                    <span class="catalog-filter__input-text-wrap">
-                        <input type="text" id="slider-range-finish-price" class="input-text input-text-default input-text-xs" title="до" data-input-value="">
-                    </span>
-                    <button type="submit" class="btn btn-default btn-xs">Показать</button>
-                </div>
-                <div>
-                    <input type="range" class="slider-range" value="" data-slider-min="10" data-slider-max="1000000" data-slider-step="10" data-slider-value="[300000,700000]" title="Цена">
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="catalog-filter__item">
-        <div class="catalog-filter__item-header">
-            <h5 class="h5 clean">Торговые марки</h5>
-        </div>
-        <div class="catalog-filter__item-inner">
-            <form class="catalog-filter__form">
-                <div class="catalog-filter__radio-wrap">
-                    <label class="radio">
-                        <input type="radio" class="radio__switch" name="radio-mark">
-                        <i class="radio__switch-imitator"></i>
-                        Марка 1
-                    </label>
-                </div>
-                <div class="catalog-filter__radio-wrap">
-                    <label class="radio">
-                        <input type="radio" class="radio__switch" name="radio-mark">
-                        <i class="radio__switch-imitator"></i>
-                        Марка 2
-                    </label>
-                </div>
-                <div class="catalog-filter__radio-wrap">
-                    <label class="radio">
-                        <input type="radio" class="radio__switch" name="radio-mark">
-                        <i class="radio__switch-imitator"></i>
-                        Марка 3
-                    </label>
-                </div>
-            </form>
-        </div>
-    </div>
+    <a class="catalog-sidebar__header filter" data-toggle="collapse" data-parent="#accordion" href="#catalog-filter__list">
+        <span class="catalog-nav__icon">
+            <i class="icon icon-filter"></i>
+        </span>
+        Фильтр товаров
+    </a>
+    <ul id="catalog-filter__list" class="catalog-filter__list collapse in">
+        <li class="catalog-filter__item">
+            <div class="catalog-filter__item-header">
+                <h5 class="h5 clean">Выбор по параметрам</h5>
+            </div>
+            <div class="catalog-filter__item-inner">
+                <p class="fs-15 mb-10">Цена</p>
+                <form class="catalog-filter__form">
+                    <div class="mb-15">
+                        <span class="fs-11">от</span>
+                        <span class="catalog-filter__input-text-wrap">
+                            <input type="text" id="slider-range-start-price" class="input-text input-text-default input-text-xs" title="от" data-input-value="">
+                        </span>
+                        <span class="fs-11">до</span>
+                        <span class="catalog-filter__input-text-wrap">
+                            <input type="text" id="slider-range-finish-price" class="input-text input-text-default input-text-xs" title="до" data-input-value="">
+                        </span>
+                        <button type="submit" class="btn btn-default btn-xs">Показать</button>
+                    </div>
+                    <div>
+                        <input type="range" class="slider-range" value="" data-slider-min="10" data-slider-max="1000000" data-slider-step="10" data-slider-value="[300000,700000]" title="Цена">
+                    </div>
+                </form>
+            </div>
+        </li>
+        <li class="catalog-filter__item">
+            <div class="catalog-filter__item-header">
+                <h5 class="h5 clean">Торговые марки</h5>
+            </div>
+            <div class="catalog-filter__item-inner">
+                <form class="catalog-filter__form">
+                    <div class="catalog-filter__radio-wrap">
+                        <label class="radio">
+                            <input type="radio" class="radio__switch" name="radio-mark">
+                            <i class="radio__switch-imitator"></i>
+                            Марка 1
+                        </label>
+                    </div>
+                    <div class="catalog-filter__radio-wrap">
+                        <label class="radio">
+                            <input type="radio" class="radio__switch" name="radio-mark">
+                            <i class="radio__switch-imitator"></i>
+                            Марка 2
+                        </label>
+                    </div>
+                    <div class="catalog-filter__radio-wrap">
+                        <label class="radio">
+                            <input type="radio" class="radio__switch" name="radio-mark">
+                            <i class="radio__switch-imitator"></i>
+                            Марка 3
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </li>
+    </ul>
 </div>

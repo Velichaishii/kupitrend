@@ -317,13 +317,24 @@
 
 .catalog-nav
     margin-bottom: 35px
-.catalog-nav__header
+.catalog-sidebar__header
+    display: block
     padding: 12px 10px 12px 45px
     background: #316cb3
     position: relative
     text-transform: uppercase
     font-size: 15px
     color: #fff
+    pointer-events: none
+    &:hover, &:active, &:focus
+        text-decoration: none
+        color: #fff
+    &:visited
+        &:hover, &:active, &:focus
+            text-decoration: none
+            color: #fff
+    &.filter
+        display: none
 .catalog-nav__list
     list-style: none
     padding-left: 0
@@ -436,8 +447,11 @@
             +sprite(minus)
 
 
-.catalog-filter
+.catalog-filter__list
+    list-style: none
+    padding-left: 0
     border: 1px solid #ababab
+    margin-bottom: 0
 .catalog-filter__item
     border-bottom: 1px solid #ababab
     &:last-child

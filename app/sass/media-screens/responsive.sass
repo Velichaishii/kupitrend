@@ -218,6 +218,17 @@
         font-size: 17px
     .h5, h5
         font-size: 15px
+    .catalog-sidebar__header
+        pointer-events: initial
+        &.filter
+            display: block
+        &:hover, &:focus, &:active
+            background: #37389f
+        &:visited
+            &:hover, &:focus, &:active
+                background: #37389f
+    .catalog-nav
+        margin-bottom: 1px
 
 @media screen and (max-width: 640px)
     .service__list

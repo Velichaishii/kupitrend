@@ -307,6 +307,23 @@
   .h5, h5 {
     font-size: 15px;
   }
+
+  .catalog-sidebar__header {
+    pointer-events: initial;
+  }
+  .catalog-sidebar__header.filter {
+    display: block;
+  }
+  .catalog-sidebar__header:hover, .catalog-sidebar__header:focus, .catalog-sidebar__header:active {
+    background: #37389f;
+  }
+  .catalog-sidebar__header:visited:hover, .catalog-sidebar__header:visited:focus, .catalog-sidebar__header:visited:active {
+    background: #37389f;
+  }
+
+  .catalog-nav {
+    margin-bottom: 1px;
+  }
 }
 @media screen and (max-width: 640px) {
   .service__list {
