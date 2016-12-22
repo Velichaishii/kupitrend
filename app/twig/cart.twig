@@ -5,7 +5,7 @@
 {% block content %}
     {% include "layouts/breadcrumbs.twig" %}
     <div class="page-body">
-        <section>
+        <section class="page-body__main">
             <div class="container">
                 <div class="page-body__sidebar">
                     {% include "layouts/sidebar.twig" %}
@@ -61,8 +61,8 @@
                             <form method="post">
                                 <div class="bdr-b-gray mb-15 text-right">
                                     <div class="order__right-b">
-                                        <p class="fs-15 mb-35">Стоимость товаров: <span>3 000 тг.</span></p>
-                                        <p class="fs-15">Выберите способ доставки:</p>
+                                        <p class="fs-15 mb-25">Стоимость товаров: <span>3 000 тг.</span></p>
+                                        <p class="fs-15 mb-5">Выберите способ доставки:</p>
                                         <select class="selectpicker" title="Способ доствки">
                                             <option value="Самовывоз" selected>Самовывоз из магазина</option>
                                             <option value="Доставка">Доставка</option>

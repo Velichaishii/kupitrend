@@ -93,6 +93,19 @@
   .order__cell:first-child {
     width: 40%;
   }
+
+  .reviews-comment__inner {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    width: 20%;
+  }
+  .reviews-comment__inner.left {
+    width: 30%;
+  }
+  .reviews-comment__inner.right {
+    width: 70%;
+  }
 }
 @media screen and (max-width: 992px) {
   .call.header > div .call__toggle {
