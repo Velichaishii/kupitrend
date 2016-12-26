@@ -10,19 +10,22 @@
     {% include "stylesheets.twig" %}
 </head>
 <body>
-    <!-- Header block -->
-    {% include "header.twig" %}
-    <!-- Header block end -->
+    <div class="page-wrap">
+        <div class="page-wrap-overlay"></div>
+        <!-- Header block -->
+        {% include "header.twig" %}
+        <!-- Header block end -->
 
-    <!-- Block content -->
-    {% block content %}{% endblock %}
-    <!-- Block content end -->
+        <!-- Block content -->
+        {% block content %}{% endblock %}
+        <!-- Block content end -->
 
-    <!-- Footer block -->
-    {% include "footer.twig" %}
-    <!-- Footer block end -->
+        <!-- Footer block -->
+        {% include "footer.twig" %}
+        <!-- Footer block end -->
 
-    <!-- Scripts -->
-    {% include "scripts.twig" %}
+        <!-- Scripts -->
+        {% include "scripts.twig" %}
+    </div>
 </body>
 </html>

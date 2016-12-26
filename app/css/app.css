@@ -7338,6 +7338,25 @@ button.close {
   width: auto;
 }
 
+.page-wrap {
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-wrap-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
+
 .page-header {
   padding-bottom: 0;
   margin: 0;
@@ -9866,6 +9885,9 @@ label {
   background: #37389f;
   color: #fff;
 }
+.service__link i {
+  margin-left: 10px;
+}
 
 .search {
   display: flex;
@@ -11665,6 +11687,12 @@ label {
   height: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    width: auto;
+    max-width: 1200px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .navbar-collapse {
     float: none;
@@ -11677,11 +11705,11 @@ label {
     position: fixed;
     top: 0;
     left: -320px;
-    z-index: 10;
-    -webkit-transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    z-index: 90;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
   }
   .navbar-collapse.in {
     margin: 0;
@@ -11792,18 +11820,33 @@ label {
 
   .service__list {
     padding-left: 0;
-    float: none;
   }
 
+  .service__item {
+    margin-left: 10px;
+  }
+  .service__item:first-child {
+    margin-left: 0;
+  }
   .service__item:last-child .service__link {
-    padding-left: 20px;
+    padding-left: 5px;
   }
 
+  .service__link {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .service__link:hover, .service__link:active, .service__link:focus {
     background: none;
   }
   .service__link:visited:hover, .service__link:visited:active, .service__link:visited:focus {
     background: none;
+  }
+  .service__link span {
+    display: none;
+  }
+  .service__link i {
+    margin-left: 0;
   }
 
   .pay-soc-wrap {
@@ -11846,9 +11889,10 @@ label {
 
   .order__img-link {
     float: none;
-    width: 100%;
-    padding-top: 100%;
-    margin-bottom: 10px;
+    width: auto;
+    max-width: 90%;
+    padding-top: 90%;
+    margin: 0 auto 10px auto;
   }
 
   .order__right-b {
@@ -11993,33 +12037,6 @@ label {
   }
 }
 @media screen and (max-width: 640px) {
-  .service__list {
-    display: block;
-    margin: 0 -15px;
-  }
-
-  .service__item {
-    display: block;
-  }
-
-  .service__link {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .service__item:last-child .service__link {
-    padding-right: 20px;
-  }
-
-  .service__link:hover, .service__link:active, .service__link:focus {
-    background: #37389f;
-    color: #fff;
-  }
-  .service__link:visited:hover, .service__link:visited:active, .service__link:visited:focus {
-    background: #37389f;
-    color: #fff;
-  }
-
   .reviews-comment__inner.left {
     display: block;
     width: 100%;
@@ -12083,6 +12100,31 @@ label {
   }
   .product-info .nav-tabs__item:last-child {
     border-bottom: 1px solid #aaaaaa;
+  }
+
+  .service .col-xs-7 {
+    width: 100%;
+  }
+  .service .col-xs-5 {
+    width: 100%;
+  }
+
+  .service__list {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .service__item:last-child .service__link {
+    padding: 10px;
+  }
+
+  .service__link {
+    padding: 10px;
+  }
+
+  .search {
+    padding-top: 10px;
   }
 }
 @media screen and (max-height: 640px) {

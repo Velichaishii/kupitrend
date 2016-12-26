@@ -165,6 +165,29 @@ function handleFiles(files) {
 }
 
 app.appLoad('full', function () {
+    var navbarToggleOpen = $('.navbar-header .navbar-toggle');
+    var navbarToggleClose = $('.navbar-collapse .navbar-toggle-close');
+    var navbarCollapse = $('.navbar .navbar-collapse');
+    var wrapOver = $('.page-wrap-overlay');
+
+    navbarToggleOpen.click(function () {
+        wrapOver.stop().fadeIn(400);
+    });
+    navbarToggleClose.click(function () {
+        wrapOver.stop().fadeOut(400);
+    });
+
+    $(wrapOver).click(function () {
+        wrapOver.stop().fadeOut(400);
+        navbarCollapse.removeClass('in');
+    });
+
+    $(".product-card__photo-small").click(function(){
+       var this_data = $(this).data('large-src');
+
+        $(".product-card__photo-bg").attr('src', this_data);
+    });
+
     $(".slider-range").each(function () {
         var slider = $(this);
         var sliderStart = $('#slider-range-start-price');
@@ -255,6 +278,7 @@ app.appLoad('full', function () {
         deploy();
     });
     deploy();
+
 });
 
 function viewport() {
