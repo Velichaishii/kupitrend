@@ -183,9 +183,10 @@ app.appLoad('full', function () {
     });
 
     $(".product-card__photo-small").click(function(){
-       var this_data = $(this).data('large-src');
+       var dataSrc = $(this).attr('data-large-src');
 
-        $(".product-card__photo-bg").attr('src', this_data);
+        $(".product-card__photo-big").html("<img src="+dataSrc+" alt=''>");
+        $(".product-card__photo-big img").addClass("product-card__photo-img")
     });
 
     $(".slider-range").each(function () {

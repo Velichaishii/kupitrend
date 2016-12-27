@@ -776,6 +776,15 @@
     position: absolute
     top: 0
     left: 0
+.product-card__photo-img
+    display: block
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    object-fit: contain
+    -o-object-fit: contain
 .product-card__photo-small
     display: block
     padding-top: 100%
@@ -795,7 +804,7 @@
         z-index: -10
         opacity: 0
         +transition(all 0.3s ease 0s)
-    &:hover, &:focus
+    &:hover, &:focus, &:active
         border-color: #316cb3
         &:before
             background: #000
