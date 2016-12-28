@@ -284,9 +284,11 @@
     height: 100%
     background: #9d9d9d
 .banners-top__left
+    display: block
     .banners-top__img
         padding-top: 45.2%
 .banners-top__right
+    display: block
     .banners-top__img
         padding-top: 91.5%
 
@@ -514,7 +516,7 @@
     margin-bottom: 10px
     position: relative
     overflow: hidden
-.catalog-showcase__img-bg
+.catalog-showcase__img
     display: block
     width: 100%
     height: 100%
@@ -523,6 +525,8 @@
     left: 0
     backface-visibility: hidden
     transform: translateZ(0)
+    object-fit: cover
+    -o-object-fit: cover
 .catalog-showcase__service
     font-size: 0
     margin-bottom: 11px
