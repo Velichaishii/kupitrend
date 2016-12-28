@@ -10892,7 +10892,7 @@ label {
   margin-right: 15px;
 }
 
-.order__img-bg {
+.order__img {
   width: 100%;
   height: auto;
 }
@@ -11624,6 +11624,8 @@ label {
   left: 0;
   backface-visibility: hidden;
   transform: translateZ(0);
+  object-fit: cover;
+  -o-object-fit: cover;
 }
 
 .payments {
