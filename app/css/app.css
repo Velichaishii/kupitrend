@@ -10098,23 +10098,26 @@ label {
 }
 
 .banners-top__img {
+  display: block;
   width: 100%;
   height: 100%;
-  background: #9d9d9d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  -o-object-fit: cover;
 }
 
 .banners-top__left {
   display: block;
-}
-.banners-top__left .banners-top__img {
   padding-top: 45.2%;
+  position: relative;
 }
 
 .banners-top__right {
   display: block;
-}
-.banners-top__right .banners-top__img {
   padding-top: 91.5%;
+  position: relative;
 }
 
 .sorting {
@@ -10885,18 +10888,13 @@ label {
   display: block;
   float: left;
   width: 100px;
-  height: 80px;
-  position: relative;
   overflow: hidden;
   margin-right: 15px;
 }
 
 .order__img-bg {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  height: auto;
 }
 
 .order__right-b {
@@ -11040,15 +11038,6 @@ label {
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
-}
-
-.product-card__photo-bg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .product-card__photo-img {
@@ -11626,7 +11615,7 @@ label {
   overflow: hidden;
 }
 
-.products__gallery-img-bg {
+.products__gallery-img {
   display: block;
   width: 100%;
   height: 100%;
@@ -11723,7 +11712,6 @@ label {
     padding: 15px 0;
     margin: 0;
     background: #eeeeee;
-    border-right: 1px solid #aaaaaa;
     position: fixed;
     top: 0;
     left: -320px;
@@ -11782,7 +11770,7 @@ label {
     padding: 0;
   }
 
-  .banners-top__right .banners-top__img {
+  .banners-top__right {
     padding-top: 91.9%;
   }
 
@@ -11884,7 +11872,7 @@ label {
     text-align: right;
   }
 
-  .banners-top__right .banners-top__img {
+  .banners-top__right {
     padding-top: 92%;
   }
 
@@ -11913,7 +11901,6 @@ label {
     float: none;
     width: auto;
     max-width: 90%;
-    padding-top: 90%;
     margin: 0 auto 10px auto;
   }
 
